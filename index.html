@@ -48,7 +48,6 @@
 
     <!-- Main Content -->
     <main class="flex-1">
-
             <div className="w-full h-[calc(100vh-64px)] overflow-hidden bg-gray-900">
                 <div id="loading-indicator" class="absolute inset-0 bg-gray-500 flex items-center justify-center z-10">
                     <div class="flex flex-col items-center">
@@ -63,17 +62,6 @@
     </main>
 
     <script>
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
-            const closeIcon = document.getElementById('close-icon');
-            
-            mobileMenu.classList.toggle('active');
-            menuIcon.classList.toggle('hidden');
-            closeIcon.classList.toggle('hidden');
-        }
-
         // Hide loading indicator after 2 seconds
         setTimeout(() => {
             const loadingIndicator = document.getElementById('loading-indicator');
