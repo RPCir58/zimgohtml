@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZIMGo (vCloudfront)</title>
-    <meta name="description" content="Dónanos en Ko-fi para que podamos mantener ZIMGo en pie.">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.png" type="image/svg+xml">
-    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="apple-touch-icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'border': 'hsl(220 13% 91%)',
-                        'input': 'hsl(220 13% 91%)',
-                        'ring': 'hsl(224 71.4% 4.1%)',
-                        'background': 'hsl(0 0% 100%)',
-                        'foreground': 'hsl(224 71.4% 4.1%)',
-                        'primary': 'hsl(142.1 70.6% 45.3%)',
-                        'primary-foreground': 'hsl(210 20% 98%)',
-                        'secondary': 'hsl(220 14.3% 95.9%)',
-                        'secondary-foreground': 'hsl(220.9 39.3% 11%)',
-                        'destructive': 'hsl(0 84.2% 60.2%)',
-                        'destructive-foreground': 'hsl(210 20% 98%)',
-                        'muted': 'hsl(220 14.3% 95.9%)',
-                        'muted-foreground': 'hsl(220 8.9% 46.1%)',
-                        'accent': 'hsl(220 14.3% 95.9%)',
-                        'accent-foreground': 'hsl(220.9 39.3% 11%)',
-                        'popover': 'hsl(0 0% 100%)',
-                        'popover-foreground': 'hsl(224 71.4% 4.1%)',
-                        'card': 'hsl(0 0% 100%)',
-                        'card-foreground': 'hsl(224 71.4% 4.1%)'
-                    }
-                }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZIMGo (vCloudfront)</title>
+  <meta name="description" content="Dónanos en Ko-fi para que podamos mantener ZIMGo en pie.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.png" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'border': 'hsl(220 13% 91%)',
+            'input': 'hsl(220 13% 91%)',
+            'ring': 'hsl(224 71.4% 4.1%)',
+            'background': 'hsl(0 0% 100%)',
+            'foreground': 'hsl(224 71.4% 4.1%)',
+            'primary': 'hsl(142.1 70.6% 45.3%)',
+            'primary-foreground': 'hsl(210 20% 98%)',
+            'secondary': 'hsl(220 14.3% 95.9%)',
+            'secondary-foreground': 'hsl(220.9 39.3% 11%)',
+            'destructive': 'hsl(0 84.2% 60.2%)',
+            'destructive-foreground': 'hsl(210 20% 98%)',
+            'muted': 'hsl(220 14.3% 95.9%)',
+            'muted-foreground': 'hsl(220 8.9% 46.1%)',
+            'accent': 'hsl(220 14.3% 95.9%)',
+            'accent-foreground': 'hsl(220.9 39.3% 11%)',
+            'popover': 'hsl(0 0% 100%)',
+            'popover-foreground': 'hsl(224 71.4% 4.1%)',
+            'card': 'hsl(0 0% 100%)',
+            'card-foreground': 'hsl(224 71.4% 4.1%)'
+          }
         }
-    </script>
+      }
+    }
+  </script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+  </style>
 </head>
+<body class="bg-gray-900 h-screen w-screen">
+  <!-- Main Content -->
+  <main class="h-screen w-screen relative">
+    <div id="loading-indicator" class="absolute inset-0 bg-gray-500 flex items-center justify-center z-10">
+      <div class="flex flex-col items-center">
+        <div class="w-12 h-12 border-4 border-green-200 border-t-green-500 rounded-full animate-spin mb-4"></div>
+        <p class="text-white text-lg">Cargando ZIMGo...</p>
+      </div>
+    </div>
 
-    <!-- Main Content -->
-    <main class="flex-1">
-            <div className="w-full h-[calc(100vh-64px)] overflow-hidden bg-gray-900">
-                <div id="loading-indicator" class="absolute inset-0 bg-gray-500 flex items-center justify-center z-10">
-                    <div class="flex flex-col items-center">
-                        <div class="w-12 h-12 border-4 border-green-200 border-t-green-500 rounded-full animate-spin mb-4"></div>
-                        <p class="text-white text-lg">Cargando ZIMGo...</p>
-                    </div>
-                </div>
-                <object data="https://zimgo.vercel.app/" type="text/html" class="w-full h-full" title="ZIMGo">
-                    <embed src="https://zimgo.vercel.app" type="text/html" class="w-full h-full" title="ZIMGo" />
-                </object>
-            </div>
-    </main>
+    <object data="https://zimgo.vercel.app/" type="text/html" class="w-full h-full absolute inset-0" title="ZIMGo">
+      <embed src="https://zimgo.vercel.app/" type="text/html" class="w-full h-full" title="ZIMGo" />
+    </object>
+  </main>
 
-    <script>
-        // Hide loading indicator after 2 seconds
-        setTimeout(() => {
-            const loadingIndicator = document.getElementById('loading-indicator');
-            loadingIndicator.style.display = 'none';
-        }, 2000);
-    </script>
+  <script>
+    // Oculta el loader después de 2 segundos
+    setTimeout(() => {
+      const loadingIndicator = document.getElementById('loading-indicator');
+      if (loadingIndicator) loadingIndicator.style.display = 'none';
+    }, 2000);
+  </script>
 </body>
 </html>
