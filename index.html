@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZIMGo (vCloudfront)</title>
-  <meta name="description" content="Una web hecha para desbloquear creada por RP_Circulo.">
+  <meta name="description" content="Versión descontinuada. https://zimgo.vercel.app/">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.png" type="image/svg+xml">
@@ -57,13 +57,14 @@
 <body class="bg-gray-900 h-screen w-screen">
   <!-- Main Content -->
   <main class="h-screen w-screen relative">
+    <p>Esta versión de ZIMGo ha sido descontinuada. Entra a la web normal en https://zimgo.vercel.app/.</p>
     <div id="loading-indicator" class="absolute inset-0 bg-gray-500 flex items-center justify-center z-10">
       <div class="flex flex-col items-center">
         <div class="w-12 h-12 border-4 border-green-200 border-t-green-500 rounded-full animate-spin mb-4"></div>
-        <p class="text-white text-lg">Conectando...</p>
+        <p class="text-white text-lg">Esta versión de ZIMGo ha sido descontinuada. Entra a https://zimgo.vercel.app/ para recibir nuevas actualizaciones.</p>
       </div>
     </div>
-
+    
     <object data="https://zimgo.vercel.app/" type="text/html" class="w-full h-full absolute inset-0" title="ZIMGo">
       <embed src="https://zimgo.vercel.app/" type="text/html" class="w-full h-full" title="ZIMGo" />
     </object>
@@ -74,7 +75,7 @@
     setTimeout(() => {
       const loadingIndicator = document.getElementById('loading-indicator');
       if (loadingIndicator) loadingIndicator.style.display = 'none';
-    }, 2000);o
+    }, 1500);o
   </script>
 </body>
 </html>
